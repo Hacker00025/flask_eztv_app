@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EZTV Downloader</title>
+</head>
+<body>
+    <form action="{{ url_for('download') }}"  method="post">
+        <label>Enter URL of torrent</label>
+        <input type="text" placeholder="URL" name="url">
+        <br>
+        <label>Please select Season</label>
+        <select name="season">
+            <option value="1">Season 1</option>
+            <option value="2">Season 2</option>
+            <option value="3">Season 3</option>
+            <option value="4">Season 4</option>
+            <option value="5">Season 5</option>
+            <option value="6">Season 6</option>
+        </select>
+        <br>
+        <label>Please select quality</label>
+        <select name="quality">
+            <option value="480">480p</option>
+            <option value="720">720p</option>
+            <option value="1080">1080p</option>
+        </select>
+        <br>
+        <button>Download</button>
+    </form>
+</body>
+</html>

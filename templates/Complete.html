@@ -1,0 +1,29 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="{{ url_for('static', filename='css/stylesheet1.css') }}" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+
+<h1 id="header">Downloaded Torrents</h1>
+<button type="button" style="margin-top: 6px; margin-left: 30px; float: left; " class="btn btn-primary btn-sm" onclick="window.location.href='{{ url_for('home') }}';">Home</button>
+<div id="content">
+	<ul>
+        {% for i in list %}
+    	<li>{{ i }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script>
+    //just a basic example of some TweenMax features
+
+TweenMax.from("#header", .2, {opacity:0, repeat:2, yoyo:true})
+
+/*
+staggerFrom() docs: https://api.greensock.com/js/com/greensock/TweenMax.html#staggerFrom()
+*/
+
+//targets, duration, vars, stagger
+TweenMax.staggerFrom("li", .5, {top:100, opacity:0, delay:1, ease:Back.easeOut}, 0.1);
+
+</script>

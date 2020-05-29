@@ -1,0 +1,5 @@
+pip~=20.0.2
+setuptools~=39.0.1
+requests~=2.23.0
+Flask~=1.1.2
+beautifulsoup4~=4.9.0
